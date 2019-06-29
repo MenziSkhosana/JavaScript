@@ -16,7 +16,7 @@ var rightArm = document.getElementById("rightarm");
 rightEye.addEventListener("click", moveUpDown);
 leftEye.addEventListener("click", moveUpDown);
 leftArm.addEventListener("click", moveRightLeft);
-rightArm.addEventListener("click",moveUpDown);
+rightArm.addEventListener("click",moveArmUpDown);
 
 function moveUpDown(e) {
   var robotPart = e.target;
@@ -28,6 +28,21 @@ function moveUpDown(e) {
     robotPart.style.top = top + '%';    
     top++;
     if (top === 20){
+      clearInterval(id);
+    }
+  }
+  
+}
+function moveArmUpDown(e) {
+  var robotPart = e.target;
+  var top = 0;
+
+  var id = setInterval(frame, 10) // draw every 10ms
+
+  function frame() {
+    robotPart.style.top = top + '%';    
+    top++;
+    if (top === 36){
       clearInterval(id);
     }
   }

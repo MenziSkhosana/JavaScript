@@ -3,10 +3,10 @@ YUI().use('node', 'anim', 'anim-node-plugin', function(Y) {
     var o = Y.one('#o'),
         oW = o.get('offsetWidth'),
         oH = o.get('offsetHeight'),
-        max = 36,
+        max = 200,
         min = 12,
-        bubbles = 100,
-        timerDelay = 8000;
+        bubbles = 150,
+        timerDelay = 4000;
 
 
     function makeBubble() {
